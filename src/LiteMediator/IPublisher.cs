@@ -5,6 +5,7 @@ namespace LiteMediator;
 /// </summary>
 public interface IPublisher
 {
+    /// <summary>Publica a notificação para todos os handlers registrados para <typeparamref name="TNotification"/>.</summary>
     Task Publish<TNotification>(TNotification notification, CancellationToken cancellationToken = default)
         where TNotification : INotification;
 

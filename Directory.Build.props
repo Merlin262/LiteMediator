@@ -1,0 +1,26 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Metadados compartilhados por todos os projetos "packable" (LiteMediator, LiteMediator.Extensions.DependencyInjection). -->
+    <Authors>Merlin262</Authors>
+    <Product>LiteMediator</Product>
+    <PackageProjectUrl>https://github.com/Merlin262/LiteMediator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Merlin262/LiteMediator</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>mediator;cqrs;mediatr;pipeline;notifications</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright (c) 2026 João Merlin</Copyright>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <!-- Versão do pacote. Suba manualmente (SemVer) antes de criar uma tag de release. -->
+    <Version>0.1.0</Version>
+
+    <!-- Só os projetos de biblioteca (LiteMediator, LiteMediator.Extensions.DependencyInjection) devem virar pacote NuGet. -->
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+</Project>

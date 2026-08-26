@@ -16,11 +16,13 @@ public sealed class Mediator : ISender, IPublisher
 
     private readonly IServiceProvider _serviceProvider;
 
+    /// <summary>Cria o mediator, resolvendo handlers e behaviors através de <paramref name="serviceProvider"/>.</summary>
     public Mediator(IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
     }
 
+    /// <inheritdoc/>
     public Task<TResponse> Send<TResponse>(IRequest<TResponse> request, CancellationToken cancellationToken = default)
     {
         ArgumentNullException.ThrowIfNull(request);
@@ -37,9 +39,11 @@ public sealed class Mediator : ISender, IPublisher
         return wrapper.Handle(request, _serviceProvider, cancellationToken);
     }
 
+    /// <inheritdoc/>
     public Task Send(IRequest request, CancellationToken cancellationToken = default) =>
         Send<Unit>(request, cancellationToken);
 
+    /// <inheritdoc/>
     public Task Publish<TNotification>(TNotification notification, CancellationToken cancellationToken = default)
         where TNotification : INotification
     {
@@ -47,6 +51,7 @@ public sealed class Mediator : ISender, IPublisher
         return PublishCore(notification, cancellationToken);
     }
 
+    /// <inheritdoc/>
     public Task Publish(object notification, CancellationToken cancellationToken = default)
     {
         ArgumentNullException.ThrowIfNull(notification);

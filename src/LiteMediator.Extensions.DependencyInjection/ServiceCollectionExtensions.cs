@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace LiteMediator.Extensions.DependencyInjection;
 
+/// <summary>Métodos de extensão para registrar o LiteMediator num <see cref="IServiceCollection"/>.</summary>
 public static class ServiceCollectionExtensions
 {
     /// <summary>

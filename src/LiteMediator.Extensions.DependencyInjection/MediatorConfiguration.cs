@@ -19,12 +19,14 @@ public sealed class MediatorConfiguration
     /// </summary>
     public ServiceLifetime HandlerLifetime { get; set; } = ServiceLifetime.Transient;
 
+    /// <summary>Escaneia <paramref name="assembly"/> em busca de handlers concretos.</summary>
     public MediatorConfiguration RegisterServicesFromAssembly(Assembly assembly)
     {
         AssembliesToScan.Add(assembly);
         return this;
     }
 
+    /// <summary>Escaneia todos os <paramref name="assemblies"/> em busca de handlers concretos.</summary>
     public MediatorConfiguration RegisterServicesFromAssemblies(params Assembly[] assemblies)
     {
         foreach (var assembly in assemblies)
@@ -35,6 +37,7 @@ public sealed class MediatorConfiguration
         return this;
     }
 
+    /// <summary>Escaneia o assembly que contém <typeparamref name="TMarker"/> em busca de handlers concretos.</summary>
     public MediatorConfiguration RegisterServicesFromAssemblyContaining<TMarker>() =>
         RegisterServicesFromAssembly(typeof(TMarker).Assembly);
 

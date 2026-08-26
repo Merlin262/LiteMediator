@@ -7,5 +7,6 @@ namespace LiteMediator;
 public interface INotificationHandler<in TNotification>
     where TNotification : INotification
 {
+    /// <summary>Reage à notificação publicada.</summary>
     Task Handle(TNotification notification, CancellationToken cancellationToken);
 }

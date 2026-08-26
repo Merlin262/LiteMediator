@@ -6,6 +6,7 @@ namespace LiteMediator;
 public interface IRequestHandler<in TRequest, TResponse>
     where TRequest : IRequest<TResponse>
 {
+    /// <summary>Processa o request e produz a resposta.</summary>
     Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken);
 }
 
@@ -22,5 +23,6 @@ public abstract class RequestHandlerBase<TRequest> : IRequestHandler<TRequest, U
         return Unit.Value;
     }
 
+    /// <summary>Processa o request. Não precisa retornar nada — o <see cref="Unit"/> é produzido automaticamente.</summary>
     protected abstract Task Handle(TRequest request, CancellationToken cancellationToken);
 }

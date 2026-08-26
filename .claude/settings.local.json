@@ -11,7 +11,8 @@
       "Bash(dotnet sln *)",
       "Bash(dotnet run *)",
       "Bash(cd \"/c/Users/joaom/source/repos/MediatoR_2/benchmarks/LiteMediator.Benchmarks\" && dotnet run -c Release --no-build -- --filter \"*SendBenchmarks*\" --job dry > /tmp/bench_out.txt 2>&1; grep -n -i -A 20 \"Exception\" /tmp/bench_out.txt | head -100)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(dotnet pack *)"
     ]
   }
 }
