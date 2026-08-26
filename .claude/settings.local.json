@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet --version)",
+      "Bash(dotnet new *)",
+      "Bash(mkdir -p src/LiteMediator src/LiteMediator.Extensions.DependencyInjection tests/LiteMediator.Tests)",
+      "Bash(cd \"/c/Users/joaom/source/repos/MediatoR_2\" && \\\\ *)",
+      "Bash(dotnet build *)",
+      "Bash(dotnet add *)",
+      "Bash(dotnet test *)",
+      "Bash(dotnet sln *)",
+      "Bash(dotnet run *)",
+      "Bash(cd \"/c/Users/joaom/source/repos/MediatoR_2/benchmarks/LiteMediator.Benchmarks\" && dotnet run -c Release --no-build -- --filter \"*SendBenchmarks*\" --job dry > /tmp/bench_out.txt 2>&1; grep -n -i -A 20 \"Exception\" /tmp/bench_out.txt | head -100)",
+      "Read(//tmp/**)"
+    ]
+  }
+}

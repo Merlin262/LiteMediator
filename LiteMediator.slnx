@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/LiteMediator.Benchmarks/LiteMediator.Benchmarks.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/LiteMediator.Extensions.DependencyInjection/LiteMediator.Extensions.DependencyInjection.csproj" />
+    <Project Path="src/LiteMediator/LiteMediator.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LiteMediator.Tests/LiteMediator.Tests.csproj" />
+  </Folder>
+</Solution>
