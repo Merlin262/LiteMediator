@@ -13,7 +13,7 @@ O dispatch é feito via reflection cacheada por tipo de request/notification (me
 ## Instalação
 
 ```bash
-dotnet add package LiteMediator
+dotnet add package LiteMediator.Core
 dotnet add package LiteMediator.Extensions.DependencyInjection
 ```
 

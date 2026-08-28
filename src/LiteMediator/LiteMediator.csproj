@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
+    <PackageId>LiteMediator.Core</PackageId>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Mediator leve (padrão mediator/CQRS) para .NET: requests com IRequestHandler, notifications com múltiplos handlers, e pipeline behaviors via decorator. API compatível em espírito com o MediatR.</Description>
   </PropertyGroup>
