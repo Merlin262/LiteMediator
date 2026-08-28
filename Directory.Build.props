@@ -17,7 +17,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
     <!-- Versão do pacote. Suba manualmente (SemVer) antes de criar uma tag de release. -->
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
 
     <!-- Só os projetos de biblioteca (LiteMediator, LiteMediator.Extensions.DependencyInjection) devem virar pacote NuGet. -->
     <IsPackable>false</IsPackable>
